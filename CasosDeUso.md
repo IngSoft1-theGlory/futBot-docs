@@ -91,8 +91,8 @@
   9.  El sistema muestra por pantalla que se creo la liga con éxito
 * **Escenario Alternativo:**
   *  1a. El usuario decide cancelar la creacion de la liga
-  *  7a. El usuario decide no poner una contraseña a la liga, por lo que crea una liga privada
-  *  7b. El usuario decide poner una contraseña a la liga, por lo que crea una liga publica
+  *  7a. El usuario decide no poner una contraseña a la liga, por lo que crea una liga publica
+  *  7b. El usuario decide poner una contraseña a la liga, por lo que crea una liga privada
 * **Escenario Excepcional:**
   *  3a. El sistema muestra por mensaje que la alineacion no es correcta
   *  3b. El usuario elige otra alineacion
