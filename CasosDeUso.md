@@ -24,23 +24,24 @@
   2.  El sistema le muestra las opciones de registrar usuario o ingresar
   3.  El usuario elige registrarse
   4.  El sistema le muestra las casillas a rellenar por el usuario
-  5.  El usuario registra un nombre unico para su club 
-  6.  El usuario registra un mail unico
-  7.  El usuario registra una contraseña asociada a la cuenta
-  8.  El usuario coloca una imagen para identificar el club
-  9.  El usuario termina de registrarse
-  10.  El sistema muestra por pantalla que el usuario se registro correctamente
+  5.  El usuario registra un username
+  6.  El usuario registra un nombre unico para su club 
+  7.  El usuario registra un mail unico
+  8.  El usuario registra una contraseña asociada a la cuenta
+  9.  El usuario coloca una imagen para identificar el club
+  10.  El usuario termina de registrarse
+  11.  El sistema muestra por pantalla que el usuario se registro correctamente
 * **Escenarios Alternativos:**
   *  1a. El usuario decide no crear la cuenta seleccionando el boton de cancelar
   *  1b. El sistema muestra por mensaje que el usuario no se pudo crear 
 * **Escenarios Excepcionales:**
-  *  5a. El usuario ingresa un nombre del club ya existente
-  *  5b. El sistema muestra por mensaje que el nombre del club ya existe, ingrese otro nombre 
-  *  6a. El usuario ingresa un mail erroneo o que no existe 
-  *  6b. El sistema muestra por mensaje que ingreso un mail incorrecto
-  *  8a. El usuario ingresa un avatar invalido
-  *  8a. El sistema muestra por mensaje que el avatar es invalido y que ingrese otro avatar
-  *  10a. El sistema muestra por mensaje que no se pudo crear el usuario por un error del sistema
+  *  6a. El usuario ingresa un nombre del club ya existente
+  *  6b. El sistema muestra por mensaje que el nombre del club ya existe, ingrese otro nombre 
+  *  7a. El usuario ingresa un mail erroneo o que no existe 
+  *  7b. El sistema muestra por mensaje que ingreso un mail incorrecto
+  *  9a. El usuario ingresa un avatar invalido
+  *  9a. El sistema muestra por mensaje que el avatar es invalido y que ingrese otro avatar
+  *  11a. El sistema muestra por mensaje que no se pudo crear el usuario por un error del sistema
 * **Postcondiciones:** 
   *  El sistema logro registrar la cuenta nueva
   
