@@ -59,10 +59,13 @@
   6. El sistema almacena el nuevo comportamiento en la biblioteca personal del usuario, la cual no tiene límite de capacidad (N comportamientos posibles).
   7. El sistema muestra un mensaje de éxito confirmando la creación.
 * **Escenarios Alternativos:**
+  * 1a. El usuario decide no crear un comportamiento nuevo cancelando la creación, el sistema lo devuelve al menú.
+* **Escenarios Excepcionales:**
   * 5a. Datos incompletos: Si el campo "Nombre" o "Código" se encuentran vacíos, el sistema muestra un mensaje de error solicitando que se completen y detiene el proceso (quedandose en el punto 4).
   * 5b. [FUTURA REVISION: SOLO EN CASO DE VALIDAR CODIGO EN ESTE PUNTO] Código malicioso/inválido: Si el sistema detecta en el paso 5 que el código intenta importar librerías prohibidas o tiene errores de sintaxis, se rechaza la creación, se muestra un mensaje de advertencia ("Código no permitido") y detiene el proceso (quedandose en el punto 4).
 * **Postcondiciones:** 
   * El comportamiento queda creado con antelación y disponible en la cuenta del usuario para ser asignado a sus jugadores (titulares o suplentes) de cara a futuros partidos.
+
 
 ### CU-03: Crear jugador
 * **Actor:**
@@ -127,8 +130,7 @@
   * Usuario
 * **Precondicion:** 
   * El usuario debe estar logueado en el sistema.
-  * ¿? El usuario debe tener un equipo creado ¿?.
-  * El usuario debe tener al menos 6 jugadores creados en su club para poder participar.
+  * El usuario debe tener al menos 6 jugadores, con sus comportamientos previamente asignados, creados en su club para poder participar.
   * La liga seleccionada no debe haber superado su cantidad de equipos máxima.
 * **Escenario Principal:**
   1. El usuario selecciona una liga desde la lista de ligas disponibles.
@@ -140,7 +142,7 @@
   7. El sistema valida que la contraseña (si aplica) sea correcta y que aún haya cupo disponible.
   8. El sistema inscribe al equipo del usuario en la liga.
   9. El sistema muestra un mensaje de confirmación de inscripción exitosa.
-* **Escenarios Alternativos:**
+* **Escenarios Excepcionales:**
   * 3a. Contraseña incorrecta: Si la liga es privada y el usuario ingresa una contraseña inválida en el paso 3, el sistema muestra un mensaje de error y detiene la inscripción (permite reintentar).
   * 5a. Selección de jugadores inválida: Si el usuario selecciona más o menos de 6 jugadores, o no define correctamente titulares y suplentes, el sistema deshabilita el botón de confirmación hasta que la selección sea válida.
   * 7a. Liga sin cupo: Si entre el paso 1 y el 7 otro usuario ocupó el último lugar y la liga se quedó sin cupos, el sistema cancela la inscripción y muestra un mensaje avisando que la liga está llena.
