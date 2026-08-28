@@ -1,12 +1,54 @@
 # Especificación de Casos de Uso
 
 ## 1. Listado de Casos de Uso
-* **CU-01:** Crear un usuario
-* **CU-02:** Crear comportamientos 
-* **CU-03:** Crear jugadores 
-* **CU-04:** Crear Liga 
-* **CU-05:** Unirse a una Liga 
-* **CU-06:** Crear un amistoso 
+### **Sección 1: Usuario / Sesión** {Noah} 
+* **CU-1:** Crear un Usuario {Ema/Maximo}
+* **CU-2:** Gestionar Usuario (Incluyen los set de sus atributos) 
+* **CU-3:** Eliminar Usuario (PRE: No tener ningún compromiso ni en ligas ni partidos como anfitrión o huésped)
+* **CU-4:** Iniciar sesión (PRE: Cuenta de usuario ya creado)
+* **CU-5:** Cerrar sesión (PRE: Estar logueado)
+
+### **Sección 2: Equipo / Club**  {Ema} 
+* **CU-6:** Crear un Equipo
+* **CU-7:** Gestionar Equipo (Incluyen los set de sus atributos)
+* **CU-8:** Eliminar un Equipo  
+* **CU-9:** Mirar estadísticas del club en el ranking (listar clubes != ranking) - opcional 
+* **CU-10:** Ver perfil público de un club (se puede unificar con el caso 4)
+
+### **Sección 3: Jugadores y Comportamientos**  {Cris y Orlando}  
+* **CU-11:** Crear Comportamientos {Fer}
+* **CU-12:** Crear Jugadores {Alex}
+* **CU-13:** Intercambiar comportamiento de un jugador en partido
+* **CU-14:** Gestionar Jugadores (precondición: cada jugador debe tener un único número)
+* **CU-15:** Eliminar Comportamiento
+* **CU-16:** Eliminar Jugador
+* **CU-17:** Gestionar Comportamientos
+* **CU-18:** Asociar/Asignar un Comportamiento a un Jugador
+* **CU-19:** Elegir una alineación (Jugadores y Comportamientos)
+* **CU-20:** Elegir una formación (Posiciones en la cancha) definir
+
+### **Sección 4: Ligas** {Fer} 
+* **CU-21:** Crear Liga {Ema}
+* **CU-22:** Unirse a una Liga (Ranking de Ligas) {Fer}
+* **CU-23:** Cancelar y Eliminar una liga (PRE: NO debe estar iniciada y el usuario DEBE ser anfitrión)
+* **CU-24:** Iniciar una liga (PRE: Lo hace el anfitrión, mínimo de 3 equipos en la liga)
+* **CU-25:** Ver Todos los detalles de la liga (ranking de liga, fixture de liga, etc)
+* **CU-26:** Salir de una liga que no esté iniciada por el anfitrión 
+* **CU-27:** Listar ligas (es de acá de donde podemos ver para unirnos a una liga)
+
+### **Sección 5: Partido / Amistoso** {Alex} 
+* **CU-28:** Crear un Partido Amistoso (Ranking de Equipos) {Alex}
+* **CU-29:** Jugar un Partido 
+* **CU-30:** Cancelar (eliminar) partido amistoso si el rival no se unió
+* **CU-31:** Ver el resultado final de un partido (tanto en amistoso como en liga)
+* **CU-32:** Unirse a un amistoso (PRE: Partido amistoso creado)
+
+### **Sección 6: Simulación y Transmisión en Vivo del Partido** {Orli} 
+* **CU-33:** Intercambiar jugador en partido
+* **CU-34:** Ver jugadores, con sus estadísticas, de mi equipo y del rival dentro del partido. Y ver Comportamientos propios
+
+### **Sección 7: Ranking Global** {Cris} 
+* **CU-35:** Ver ranking global de equipos
 
 ---
 
