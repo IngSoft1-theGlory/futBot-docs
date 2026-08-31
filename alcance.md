@@ -22,13 +22,13 @@ El sitio tendrá:
 
 • La opción de crear un partido amistoso nuevo o unirse a un amistoso a la espera de un rival. Los amistosos serán un único partido entre 2 equipos y estarán prohibidos los amistosos con contraseña.
 
-• Una sala de espera para las ligas y los amistosos. En las ligas, el anfitrión podrá iniciar la liga una vez cumplido el mínimo de 3 equipos. En los amistosos, el partido iniciará luego de que se una un rival, cuando el anfitrion lo disponga?
+• Una sala de espera para las ligas y los amistosos. En las ligas, el anfitrión podrá iniciar la liga una vez cumplido el mínimo de 3 equipos. En los amistosos, el partido iniciará luego de que se una un rival de manera automatica.
 
 • La posibilidad de que, si el usuario que creó una liga o un amistoso abandona la sala de espera, los rivales sean redirigidos afuera de la sala y esta deje de existir automáticamente.
 
 • La lógica necesaria para simular los partidos. En las ligas se jugará un tiempo de [N minutos] por partido y en los amistosos de [N minutos]. Los partidos tendrán 2 pausas de hidratación (cooling break) y 1 medio tiempo (half-time), dividiéndose en 4 cuartos equitativos.
 
-• Un sistema de puntuaciones de 3 pts por victoria, 1 pt por empate y 0 pts por derrota. ¿?
+• Un sistema de puntuaciones de 3 pts por victoria, 1 pt por empate y 0 pts por derrota.
 
 • Un fixture para las ligas donde se registrarán los puntos y goles anotados.
 
