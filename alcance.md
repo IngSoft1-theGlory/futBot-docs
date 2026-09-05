@@ -4,7 +4,16 @@
 El objetivo del proyecto es desarrollar una plataforma web cliente/servidor que permita a los usuarios jugar a "FutBot": un simulador de fútbol en formato multijugador estructurado mediante la programación de comportamientos automáticos.
 
 
-### 1.2 Requisitos Funcionales
+### 1.2 Tecnologías Propuestas
+Para la implementación de la plataforma se proponen las siguientes tecnologías:
+
+* **Backend / API Framework:** FastAPI (Python).
+* **Base de Datos y ORM:** SQLAlchemy.
+* **Frontend:** React.js.
+* **Comunicación en Tiempo Real:** WebSockets para la simulación sincrónica de partidos tick a tick. 
+
+
+### 1.3 Requisitos Funcionales
 El sistema proporcionará las siguientes capacidades principales para gestionar la experiencia de juego, estructuradas de forma modular:
 
 
@@ -40,7 +49,7 @@ El sistema proporcionará las siguientes capacidades principales para gestionar 
     *   Al finalizar cada partido, se mostrará el resultado y las puntuaciones en un fixture (para ligas), o simplemente el resultado final (para amistosos).
 
 
-### 1.3 Restricciones Funcionales (Exclusiones)
+### 1.4 Restricciones Funcionales (Exclusiones)
 Para delimitar correctamente las características de la plataforma, el sitio **no deberá**:
 
 
