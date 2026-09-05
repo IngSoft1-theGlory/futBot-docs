@@ -1,617 +1,127 @@
 # Especificación de Casos de Uso
 
 ## 1. Listado de Casos de Uso
-### **Sección 1: Usuario / Sesión** {Noah} 
-* **CU-1:** Crear un Usuario {Ema/Maximo}
-* **CU-2:** Gestionar Usuario (Incluyen los set de sus atributos) 
-* **CU-3:** Eliminar Usuario (PRE: No tener ningún compromiso ni en ligas ni partidos como anfitrión o huésped)
-* **CU-4:** Iniciar sesión (PRE: Cuenta de usuario ya creado)
-* **CU-5:** Cerrar sesión (PRE: Estar logueado)
 
-### **Sección 2: Equipo / Club**  {Ema} 
-* **CU-6:** Crear un Equipo
-* **CU-7:** Gestionar Equipo (Incluyen los set de sus atributos)
-* **CU-8:** Eliminar un Equipo  
-* **CU-9:** Mirar estadísticas del club en el ranking (listar clubes != ranking) - opcional 
-* **CU-10:** Ver perfil público de un club (se puede unificar con el caso 4)
+### **Sección 1: Usuario / Sesión** {Noah}
+* **CU-1:** Crear un Usuario 
+* **CU-2:** Cambiar Nombre de Usuario 
+* **CU-3:** Eliminar Usuario 
+* **CU-4:** Iniciar sesión
+* **CU-5:** Cerrar sesión 
 
-### **Sección 3: Jugadores y Comportamientos**  {Cris y Orlando}  
-* **CU-11:** Crear Comportamientos {Fer}
-* **CU-12:** Crear Jugadores {Alex}
-* **CU-13:** Intercambiar comportamiento de un jugador en partido
-* **CU-14:** Gestionar Jugadores (precondición: cada jugador debe tener un único número)
-* **CU-15:** Eliminar Comportamiento
-* **CU-16:** Eliminar Jugador
-* **CU-17:** Gestionar Comportamientos
-* **CU-18:** Asociar/Asignar un Comportamiento a un Jugador
-* **CU-19:** Elegir una alineación (Jugadores y Comportamientos)
-* **CU-20:** Elegir una formación (Posiciones en la cancha) definir
+### **Sección 2: Equipo Y Ranking** {Ema}
+* **CU-6:** Crear un Equipo 
+* **CU-7:** Modificar Nombre del Equipo
+* **CU-8:** Modificar logo del equipo
+* **CU-9:** Mirar el ranking global de equipos
+* **CU-10:** Ver el perfil de un equipo
 
-### **Sección 4: Ligas** {Fer} 
-* **CU-21:** Crear Liga {Ema}
-* **CU-22:** Unirse a una Liga (Ranking de Ligas) {Fer}
-* **CU-23:** Cancelar y Eliminar una liga (PRE: NO debe estar iniciada y el usuario DEBE ser anfitrión)
-* **CU-24:** Iniciar una liga (PRE: Lo hace el anfitrión, mínimo de 3 equipos en la liga)
-* **CU-25:** Ver Todos los detalles de la liga (ranking de liga, fixture de liga, etc)
-* **CU-26:** Salir de una liga que no esté iniciada por el anfitrión 
-* **CU-27:** Listar ligas (es de acá de donde podemos ver para unirnos a una liga)
+### **Sección 3: Jugadores y Comportamientos**
+* **CU-11:** Crear Comportamientos
+* **CU-12:** Crear Jugador
+* **CU-13:** Intercambiar comportamiento de un jugador durante el partido
+* **CU-14:** Cambiar Nombre Jugador
+* **CU-15:** Cambiar Numero de Jugador
+* **CU-16:** Eliminar Comportamiento
+* **CU-17:** Eliminar Jugador
+* **CU-18:** Modificar nombre del Comportamiento
+* **CU-19:** Modificar la descripción de un comportamiento
+* **CU-20:** Asignar un Comportamiento a un Jugador
+* **CU-21:** Elegir una alineación (Jugadores y Comportamientos)
+* **CU-22:** Elegir una formación (Posiciones en la cancha)
+* **CU-23:** Modificar actividad del Comportamiento
 
-### **Sección 5: Partido / Amistoso** {Alex} 
-* **CU-28:** Crear un Partido Amistoso (Ranking de Equipos) {Alex}
-* **CU-29:** Jugar un Partido 
-* **CU-30:** Cancelar (eliminar) partido amistoso si el rival no se unió
-* **CU-31:** Ver el resultado final de un partido (tanto en amistoso como en liga)
-* **CU-32:** Unirse a un amistoso (PRE: Partido amistoso creado)
+### **Sección 4: Ligas** {Fer}
+* **CU-24:** Crear Liga 
+* **CU-25:** Unirse a una Liga
+* **CU-26:** Cancelar una liga
+* **CU-27:** Iniciar una liga
+* **CU-28:** Ver Todos los detalles de la liga
+* **CU-29:** Salir de una liga
 
-### **Sección 6: Simulación y Transmisión en Vivo del Partido** {Orli} 
-* **CU-33:** Intercambiar jugador en partido
-* **CU-34:** Ver jugadores, con sus estadísticas, de mi equipo y del rival dentro del partido. Y ver Comportamientos propios
+### **Sección 5: Partido Amistoso** {Alex}
+* **CU-30:** Crear un Partido Amistoso 
+* **CU-31:** Cancelar amistoso
+* **CU-32:** Unirse a un amistoso
 
-### **Sección 7: Ranking Global** {Cris} 
-* **CU-35:** Ver ranking global de equipos
+### **Sección 6: Transmisión en Vivo del Partido**
+* **CU-33:** Ver atributos de un jugador en el partido
+* **CU-34:** Ver el resultado final de un partido
+* **CU-35:** Intercambiar jugador en partido
+* **CU-36:** Salir del partido
 
 ---
 
 ## 2. Desarrollo de Casos de Uso 
 
-### CU-1: Crear un Usuario {Ema/Maximo}
-* **Actor:**  
-  * Usuario
-* **Precondicion:** 
-  * El email no debe estar en uso por otro usuario
-  * El mail debe existir (Consultar)
-  * El usuario debe tener un mail (Consultar)
-* **Escenario Principal:**
-  1. El usuario accede al sistema
-  2. El sistema le muestra las opciones de registrar usuario o ingresar
-  3. El usuario elige registrarse
-  4. El sistema le muestra las casillas a rellenar por el usuario
-  5. El usuario registra un username
-  6. El usuario registra un nombre unico para su club
-  7. El usuario registra un mail unico
-  8. El usuario registra una contraseña asociada a la cuenta
-  9. El usuario coloca una imagen para identificar el club
-  10. El usuario termina de registrarse
-  11. El sistema muestra por pantalla que el usuario se registro correctamente
-* **Escenarios Alternativos:**
-  * 1a. El usuario decide no crear la cuenta seleccionando el boton de cancelar
-  * 1b. El sistema muestra por mensaje que el usuario no se pudo crear
-* **Escenarios Excepcionales:**
-  * 6a. El usuario ingresa un nombre del club ya existente
-  * 6b. El sistema muestra por mensaje que el nombre del club ya existe, ingrese otro nombre
-  * 7a. El usuario ingresa un mail erroneo o que no existe
-  * 7b. El sistema muestra por mensaje que ingreso un mail incorrecto
-  * 9a. El usuario ingresa un avatar invalido
-  * 9a. El sistema muestra por mensaje que el avatar es invalido y que ingrese otro avatar
-  * 11a. El sistema muestra por mensaje que no se pudo crear el usuario por un error del sistema
-* **Postcondiciones:** 
-  * El sistema logro registrar la cuenta nueva
+### CU-1: Crear un Usuario
 
-### CU-2: Gestionar Usuario (Incluyen los set de sus atributos) 
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-2: Cambiar Nombre de Usuario 
 
-### CU-3: Eliminar Usuario (PRE: No tener ningún compromiso ni en ligas ni partidos como anfitrión o huésped)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-3: Eliminar Usuario 
 
-### CU-4: Iniciar sesión (PRE: Cuenta de usuario ya creado)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-4: Iniciar sesión
 
-### CU-5: Cerrar sesión (PRE: Estar logueado)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-5: Cerrar sesión - Listo
 
 ### CU-6: Crear un Equipo
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
 
-### CU-7: Gestionar Equipo (Incluyen los set de sus atributos)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-7: Modificar Nombre del Equipo
 
-### CU-8: Eliminar un Equipo  
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-8: Modificar logo del equipo
 
-### CU-9: Mirar estadísticas del club en el ranking (listar clubes != ranking) - opcional 
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-9: Mirar el ranking global de equipos
 
-### CU-10: Ver perfil público de un club (se puede unificar con el caso 4)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-10: Ver el perfil de un equipo 
 
-### CU-11: Crear Comportamientos {Fer}
-* **Actor:** 
-  * Usuario
-* **Precondicion:** 
-  * El usuario debe estar logueado.
-* **Escenario Principal:**
-  1. El usuario accede a la sección de creación de comportamientos de la aplicación.
-  2. El usuario ingresa el nombre descriptivo para el comportamiento.
-  3. El usuario escribe o adjunta el código fuente en lenguaje Python que definirá las acciones del jugador para la duración de un tick.
-  4. El usuario hace clic en el botón para guardar o crear el comportamiento.
-  5. El sistema valida que los campos requeridos (Nombre y Código) no estén vacíos y que el código fuente cumpla con las restricciones de seguridad?.
-  6. El sistema almacena el nuevo comportamiento en la biblioteca personal del usuario, la cual no tiene límite de capacidad (N comportamientos posibles).
-  7. El sistema muestra un mensaje de éxito confirmando la creación.
-* **Escenarios Alternativos:**
-  * 1a. El usuario decide no crear un comportamiento nuevo cancelando la creación, el sistema lo devuelve al menú.
-* **Escenarios Excepcionales:**
-  * 5a. Datos incompletos: Si el campo "Nombre" o "Código" se encuentran vacíos, el sistema muestra un mensaje de error solicitando que se completen y detiene el proceso (quedandose en el punto 4).
-  * 5b. [FUTURA REVISION: SOLO EN CASO DE VALIDAR CODIGO EN ESTE PUNTO] Código malicioso/inválido: Si el sistema detecta en el paso 5 que el código intenta importar librerías prohibidas o tiene errores de sintaxis, se rechaza la creación, se muestra un mensaje de advertencia ("Código no permitido") y detiene el proceso (quedandose en el punto 4).
-* **Postcondiciones:** 
-  * El comportamiento queda creado con antelación y disponible en la cuenta del usuario para ser asignado a sus jugadores (titulares o suplentes) de cara a futuros partidos.
+### CU-11: Crear Comportamientos
 
-### CU-12: Crear Jugadores {Alex}
-* **Actor:**
-  * Usuario.
-* **Precondicion:** 
-  * Usuario logeado.
-* **Escenario Principal:**
-  1. El Usuario selecciona la opcion de "crear jugador".
-  2. El sistema muestra los campos a completar nombre, numero de camiseta, atributos (pacss) y comportamiento/s.
-  3. El usuario ingresa nombre, numero de camiseta, un valor en cada atributo del jugador en un rango permitido (20 a 100) y comportamiento/s, despues selecciona crear.
-  4. El sistema valida que los campos esten completos, que cada tributo este en el rango de (20 a 100) y que la suma total de los 5 atributos no supere el valor de 300 y como minimo un comportamiento.
-  5. El sistema acepta los datos y confirma la creacion del jugador exitosamente.
-* **Escenario Alternativo:**
-  * 3a. El usuario decide cancelar la creacion del jugador, en el ingreso de datos en los campos.
-  * El sistema muestra un mensaje y requiere una confirmacion de cancelacion.
-  * El usuario confirma la cancelacion.
-  * El sistema valida la confirmacion y regresa al usuario al menu anterior de "crear jugador".
-  * 3b. El usuario ingresa un valor indebido o deja incompleto/s alguno/s de los campos como nombre, numero de camiseta o comportamiento.
-  * El sistemas muestra una advertecia de valor incorrecto o campo imcompleto.
-  * 3c. El usuario intenta crear un jugador con un numero de camiseta repetido a otro jugador, del mismo usuario.
-  * El sistema muestra una abvertencia, no se puede crear un jugador con ese numero de camiseta, ya que el usuario tiene un jugar con ese numero.
-* **Postcondiciones:**
-  * Jugador creado exitosamente en el sistema.
+### CU-12: Crear Jugador 
 
-### CU-13: Intercambiar comportamiento de un jugador en partido
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-13: Intercambiar comportamiento de un jugador durante el partido
 
-### CU-14: Gestionar Jugadores (precondición: cada jugador debe tener un único número)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-14: Cambiar Nombre Jugador
 
-### CU-15: Eliminar Comportamiento
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-15: Cambiar Numero de Jugador
 
-### CU-16: Eliminar Jugador
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-16: Eliminar Comportamiento
 
-### CU-17: Gestionar Comportamientos
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-17: Eliminar Jugador
 
-### CU-18: Asociar/Asignar un Comportamiento a un Jugador
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-18: Modificar nombre del Comportamiento 
 
-### CU-19: Elegir una alineación (Jugadores y Comportamientos)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-19: Modificar la descripción de un comportamiento
 
-### CU-20: Elegir una formación (Posiciones en la cancha) definir
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-20: Asignar un Comportamiento a un Jugador
 
-### CU-21: Crear Liga {Ema}
-* **Actor:** 
-  * Usuario
-* **Precondicion:**
-  * El usuario debe estar logueado en el sistema
-  * El usuario debe tener al menos 6 jugadores, con sus comportamientos previamente asignados, creados en su club
-  * El usuario debe tener creado un comportamiento como minimo
-* **Escenario Principal:**
-  1. El usuario ingresa al apartado de crear una liga
-  2. El sistema le muestra las opciones para crear una liga
-  3. EL usuario elige su alineacion
-  4. El usuario elige un nombre para la liga que no este en uso
-  5. El usuario elige la duracion de cada partido
-  6. El usuario elige la cantidad maxima de equipos
-  7. El usuario decide si pone una contraseña a la liga o no
-  8. El usuario termina de crear la liga
-  9. El sistema muestra por pantalla que se creo la liga con éxito
-* **Escenario Alternativo:**
-  * 1a. El usuario decide cancelar la creacion de la liga
-  * 7a. El usuario decide no poner una contraseña a la liga, por lo que crea una liga publica
-  * 7b. El usuario decide poner una contraseña a la liga, por lo que crea una liga privada
-* **Escenario Excepcional:**
-  * 3a. El sistema muestra por mensaje que la alineacion no es correcta
-  * 3b. El usuario elige otra alineacion
-  * 4a. El sistema muestra por pantalla que el nombre de la liga ya esta en uso
-  * 4b. El usuario escribe otro nombre para la liga
-  * 9a. El sistema muestra un mensaje de error al crear una liga
-  * 9b. El sistema lleva al usuario al menu anterior sin terminar de crear la liga
-* **Postcondiciones:** 
-  * El sistema logro registrar la liga creada
+### CU-21: Elegir una alineación (Jugadores y Comportamientos)
 
-### CU-22: Unirse a una Liga (Ranking de Ligas) {Fer}
-* **Actor:** 
-  * Usuario
-* **Precondicion:** 
-  * El usuario debe estar logueado en el sistema.
-  * El usuario debe tener al menos 6 jugadores, con sus comportamientos previamente asignados, creados en su club para poder participar.
-  * La liga seleccionada no debe haber superado su cantidad de equipos máxima.
-* **Escenario Principal:**
-  1. El usuario selecciona una liga desde la lista de ligas disponibles.
-  2. El sistema verifica si la liga es pública o privada (si tiene contraseña opcional). Si es pública, omite el paso 3.
-  3. El sistema solicita la contraseña de la liga. El usuario la ingresa.
-  4. El sistema despliega la plantilla del equipo del usuario para que elija los jugadores.
-  5. El usuario selecciona exactamente 6 jugadores de su club, designando quiénes serán los 3 titulares y los 3 suplentes para esa liga.
-  6. El usuario confirma la inscripción a la liga.
-  7. El sistema valida que la contraseña (si aplica) sea correcta y que aún haya cupo disponible.
-  8. El sistema inscribe al equipo del usuario en la liga.
-  9. El sistema muestra un mensaje de confirmación de inscripción exitosa.
-* **Escenarios Excepcionales:**
-  * 3a. Contraseña incorrecta: Si la liga es privada y el usuario ingresa una contraseña inválida en el paso 3, el sistema muestra un mensaje de error y detiene la inscripción (permite reintentar).
-  * 5a. Selección de jugadores inválida: Si el usuario selecciona más o menos de 6 jugadores, o no define correctamente titulares y suplentes, el sistema deshabilita el botón de confirmación hasta que la selección sea válida.
-  * 7a. Liga sin cupo: Si entre el paso 1 y el 7 otro usuario ocupó el último lugar y la liga se quedó sin cupos, el sistema cancela la inscripción y muestra un mensaje avisando que la liga está llena.
-* **Postcondiciones:** 
-  * El equipo del usuario queda inscripto en la liga y participará del fixture generado por el sistema.
+### CU-22: Elegir una formación (Posiciones en la cancha)
 
-### CU-23: Cancelar y Eliminar una liga (PRE: NO debe estar iniciada y el usuario DEBE ser anfitrión)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-23: Modificar actividad del Comportamiento 
 
-### CU-24: Iniciar una liga (PRE: Lo hace el anfitrión, mínimo de 3 equipos en la liga)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-24: Crear Liga {Ema}
 
-### CU-25: Ver Todos los detalles de la liga (ranking de liga, fixture de liga, etc)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-25: Unirse a una Liga
 
-### CU-26: Salir de una liga que no esté iniciada por el anfitrión 
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-26: Cancelar una liga
 
-### CU-27: Listar ligas (es de acá de donde podemos ver para unirnos a una liga)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-27: Iniciar una liga
 
-### CU-28: Crear un Partido Amistoso (Ranking de Equipos) {Alex}
-* **Actor:** 
-  * Usuario.
-* **Precondicion:** 
-  * Usuario logeado.
-* **Escenario Principal:**
-  1. El usuario selecciona la opcion de "Jugar nuevo amistoso".
-  2. El sistema muestra ligas y clubes disponibles.
-  3. El usuario selecciona un club rival para jugarar.
-  4. El sistema agrega automaticamente al club seleccionado y habilita al usuario el inicio de la partida.
-  5. El usuario inicia la partida.
-  6. El sistema al terminar el partido, registra el resultado y guarda los goles de cada club.
-  7. El sistema muestra un resumen del partido, cantidad de goles, etc.
-  8. El sistema muestra 3 opciones "Volver a jugar" o "Jugar nuevo amistoso" o "Volver al menu inicial".
-* **Escenario Alternativo:**
-  * 3a. El usuario cancela el amistoso y seleciona "Cancelar".
-  * El sistema valida la cancelacion y regresa al usuario al menu anterior donde puede seleccionar 3 opciones accion.
-  * 3b. El sistema no tiene ligas o clubs disponibles.
-  * El sistema muestra un aviso "Actualmente no hay clubes/ligas disponibles" o "Actualmente no hay clubes y ligas disponibles" 
-  * El usuario "acepta" el mensaje y tiene 3 opciones (donde "Volver a jugar" y "Jugar nuevo amistoso" no estan disponibles).
-* **Postcondiciones:** 
-  * Se registra partido amistoso en un historial.
-  * Se actualizan la cantidad de goles de cada club.
+### CU-28: Ver Todos los detalles de la liga
 
-### CU-29: Jugar un Partido 
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-29: Salir de una liga 
 
-### CU-30: Cancelar (eliminar) partido amistoso si el rival no se unió
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-30: Crear un Partido Amistoso {Alex}
 
-### CU-31: Ver el resultado final de un partido (tanto en amistoso como en liga)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-31: Ver atributos de un jugador en el partido 
 
-### CU-32: Unirse a un amistoso (PRE: Partido amistoso creado)
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-32: Cancelar amistoso 
 
-### CU-33: Intercambiar jugador en partido
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-33: Ver el resultado final de un partido
 
-### CU-34: Ver jugadores, con sus estadísticas, de mi equipo y del rival dentro del partido. Y ver Comportamientos propios
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  * 
+### CU-34: Unirse a un amistoso
 
-### CU-35: Ver ranking global de equipos
-* **Actor:** 
-  * 
-* **Precondicion:** 
-  * 
-* **Escenario Principal:**
-  1. 
-* **Escenarios Alternativos:**
-  * 
-* **Escenarios Excepcionales:**
-  * 
-* **Postcondiciones:** 
-  *
+### CU-35: Intercambiar jugador en partido
+
+### CU-36: Salir del partido
