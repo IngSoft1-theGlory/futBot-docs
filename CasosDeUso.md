@@ -168,6 +168,20 @@
  * 4a.1. El sistema cierra la pestaña de confirmación y el usuario permanece en la sala de espera.
 
 ### CU-27: Iniciar una liga
+* **Actor:**
+    * Usuario
+* **Precondición:**
+    * El usuario debe ser el anfitrión de la liga.
+    * Debe haber un mínimo de 3 equipos unidos a la sala de espera.
+    * La liga no debe estar iniciada.
+* **Escenario Principal:**
+1. El usuario accede a la sala de espera de la liga.
+2. El usuario presiona el botón de “Iniciar Liga”.
+3. El sistema genera el fixture completo de la liga y cambia su estado a “Iniciada”.
+4. El sistema redirige al usuario a la pantalla de detalles de la liga durante un tiempo limitado y luego se inician los partidos automáticamente.
+* **Escenarios Alternativos:**
+ * 3a. El sistema detecta que la liga alcanzó su límite máximo de equipos. 
+ * 3a.1. El sistema inicia automáticamente la liga y genera los detalles de la liga, sin necesidad de que el anfitrión presione el botón de inicio.
 
 ### CU-28: Ver Todos los detalles de la liga
 
