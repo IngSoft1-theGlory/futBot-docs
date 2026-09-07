@@ -121,8 +121,16 @@
   *  3b. El usuario no coloca ningún logo nuevo o ingresa un formato invalido
   *  4b. El sistema no valida el logo y le pide que ingrese un logo nuevo
 
-
-### CU-9: Mirar el ranking global de equipos
+### CU-9: Mirar el Ranking Global de Equipos
+* **Actor:**
+   * Usuario
+* **Precondición:**
+   * El usuario debe estar logueado
+* **Escenario Principal:**
+   1. El usuario accede a la página principal
+   2. El sistema muestra la lista de todos los equipos ordenados en base a sus estadísticas. 
+* **Escenarios Alternativos:**
+   * 2a. El sistema detecta que no existen equipos y muestra la lista de equipos vacía.
 
 ### CU-10: Ver el perfil de un equipo 
 
