@@ -132,7 +132,17 @@
 * **Escenarios Alternativos:**
    * 2a. El sistema detecta que no existen equipos y muestra la lista de equipos vacía.
 
-### CU-10: Ver el perfil de un equipo 
+### CU-10: Ver el Perfil de un Equipo 
+* **Actor:**
+   * Usuario
+* **Precondición:**
+   * El usuario debe estar logueado 
+* **Escenario Principal:**
+   1. El usuario selecciona ver perfil de un equipo
+   2. El sistema le muestra por pantalla las estadísticas del equipo: Puntos, Goles a favor, Goles en contra, Victorias, Derrotas y Posición en el ranking.
+* **Escenarios Alternativos:**
+   * 1a. El usuario sale del perfil del equipo visitado
+   * 1b. El sistema muestra por pantalla el apartado anterior
 
 ### CU-11: Crear Comportamientos
 
