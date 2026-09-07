@@ -66,8 +66,22 @@
 ### CU-5: Cerrar sesión 
 
 ### CU-6: Crear un Equipo
+* **Actor:**
+ * Usuario
+* **Precondición:**
+ * El usuario debe estar logueado
+ * El usuario no debe tener un equipo existente
+* **Escenario Principal:**
+ 1. El usuario registra un nombre para su equipo, sin limitaciones porque no es único.
+ 2. El usuario selecciona un logo para su equipo.
+* **Escenarios Alternativos:**
+ * 1a. El usuario deja vacío el campo de nombre de equipo.
+ * 1b. El sistema le muestra un mensaje al usuario de que el campo no puede quedar vacío. 
+ * 2a. El usuario ingresa un logo invalido o no ingresa ningún logo para su equipo.
+ * 2b. El sistema le muestra por mensaje al usuario que el logo es invalido o vacío. 
 
 ### CU-7: Modificar Nombre del Equipo
+
 
 ### CU-8: Modificar logo del equipo
 
