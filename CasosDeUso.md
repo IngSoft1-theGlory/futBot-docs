@@ -104,10 +104,10 @@
 ### CU-24: Crear Liga 
 
 * **Actor:**
- * Usuario
+    * Usuario
 * **Precondición:**
-*  El usuario debe tener el mínimo de jugadores y comportamientos creados.
-*  * Cada jugador debe tener un comportamiento asignado.
+    *  El usuario debe tener el mínimo de jugadores y comportamientos creados.
+    *  * Cada jugador debe tener un comportamiento asignado.
 * **Escenario Principal:**
  1. El usuario ingresa al apartado de crear una liga
  2. El sistema le muestra las opciones para crear una liga
@@ -130,10 +130,10 @@
 
 ### CU-25: Unirse a una Liga
 * **Actor:**
- * Usuario
+    * Usuario
 * **Precondición:**
- * El usuario debe tener el mínimo de jugadores y comportamientos creados.
- * La liga seleccionada no debe estar iniciada.
+    * El usuario debe tener el mínimo de jugadores y comportamientos creados.
+    * La liga seleccionada no debe estar iniciada.
 * **Escenario Principal:** 
  1. El usuario accede al apartado de unirse a una liga
  2. El sistema muestra la lista de ligas.
@@ -197,17 +197,35 @@
  * 3a.1. El sistema omite la tabla y el fixture (ya que aún no se han generado) y muestra únicamente la lista de equipos unidos actualmente.
 
 ### CU-29: Salir de una liga 
+* **Actor:**
+    * Usuario 
+* **Precondición:**
+    * El usuario debe estar unido a la liga correspondiente.
+    * La liga no debe estar iniciada.
+    * El usuario no debe ser el anfitrión de la liga.
+* **Escenario Principal:**
+1. El usuario accede a la sala de espera de la liga a la que se unió.
+2. El usuario selecciona la opción “Abandonar Liga”.
+3. El sistema solicita confirmación para salir.
+4. El usuario confirma su salida.
+5. El sistema retira al equipo del usuario de la liga, liberando su cupo en la sala de espera.
+El sistema redirige al usuario a la sección general de listado de ligas.
+* **Escenarios Alternativos:**
+ * 4a. El usuario decide no abandonar la liga y cancela la acción.
+ * 4a.1. El sistema cierra el cuadro de confirmación y lo mantiene unido a la sala de espera.
 
-### CU-30: Crear un Partido Amistoso {Alex}
+### CU-30: Crear un Partido Amistoso 
 
 ### CU-31: Ver atributos de un jugador en el partido 
 
-### CU-32: Cancelar amistoso 
+### CU-32: Ver comportamiento del jugador en partido
 
-### CU-33: Ver el resultado final de un partido
+### CU-33: Cancelar amistoso 
 
-### CU-34: Unirse a un amistoso
+### CU-34: Ver el resultado final de un partido
 
-### CU-35: Intercambiar jugador en partido
+### CU-35: Unirse a un amistoso
 
-### CU-36: Salir del partido
+### CU-36: Intercambiar jugador en partido
+
+### CU-37: Salir del partido
