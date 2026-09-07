@@ -184,6 +184,17 @@
  * 3a.1. El sistema inicia automáticamente la liga y genera los detalles de la liga, sin necesidad de que el anfitrión presione el botón de inicio.
 
 ### CU-28: Ver Todos los detalles de la liga
+* **Actor:**
+    * Usuario
+* **Precondición:**
+    * Ninguna 
+* **Escenario Principal:**
+1. El usuario selecciona una liga desde el listado de ligas.
+2. El usuario selecciona la opción “Ver detalles”
+3. El sistema muestra la información completa de la liga, incluyendo el fixture de partidos (los ya jugados y los programados), y la tabla de la liga.
+* **Escenarios Alternativos:**
+ * 3a. La liga seleccionada aún no está iniciada
+ * 3a.1. El sistema omite la tabla y el fixture (ya que aún no se han generado) y muestra únicamente la lista de equipos unidos actualmente.
 
 ### CU-29: Salir de una liga 
 
