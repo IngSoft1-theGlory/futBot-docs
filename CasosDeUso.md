@@ -151,6 +151,21 @@
  * 6a. Liga sin cupo: Si entre el paso 1 y el 6 otro usuario ocupa el último lugar y la liga se queda sin cupos, el sistema cancela la inscripción y muestra un mensaje avisando que la liga está llena.
 
 ### CU-26: Cancelar una liga
+* **Actor:**
+    * Usuario
+* **Precondición:**
+    * El usuario debe ser el anfitrión de la liga.
+    * La liga no debe estar iniciada.
+* **Escenario Principal:**
+1. El usuario se encuentra en la sala de espera de la liga que creó.
+2. El usuario selecciona la opción de “Cancelar la Liga”.
+3. El sistema solicita la confirmación para cancelar la liga.
+4. El usuario confirma la cancelación de la liga.
+5. El sistema disuelve la sala de espera y, de haber equipos en la sala, los redirige a la página anterior 
+6. El sistema elimina la liga y muestra por pantalla un mensaje de éxito.
+* **Escenarios Alternativos:**
+ * 4a. El usuario decide no cancelar la liga.
+ * 4a.1. El sistema cierra la pestaña de confirmación y el usuario permanece en la sala de espera.
 
 ### CU-27: Iniciar una liga
 
