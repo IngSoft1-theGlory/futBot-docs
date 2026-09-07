@@ -101,7 +101,26 @@
   *  4a. El usuario ingresa un nombre vacío para el equipo  
   *  4b. El sistema no modifica el nombre del equipo ya que la casilla está vacía
 
-### CU-8: Modificar logo del equipo
+### CU-8: Modificar Logo del Equipo
+* **Actor:**
+  * Usuario
+* **Precondición:**
+  * El usuario debe tener un equipo creado
+* **Escenario Principal:**
+  1. El usuario ingresa al apartado del equipo
+  2. El sistema muestra por pantalla la plantilla del equipo
+  3. El usuario modifica el logo del equipo
+  4. El sistema verifica que no esté vacío y modifica el logo correctamente
+  5. El usuario confirma los cambios y regresa al apartado anterior
+  6. El sistema muestra por pantalla que el cambio fue exitoso y lleva al usuario al apartado anterior
+* **Escenarios Alternativos:**
+  *  1a. El usuario sale del apartado equipo sin hacer cambios
+  *  1b. El sistema cierra la gestión de equipo y vuelve al apartado anterior
+  *  3a. El usuario ingresa al apartado equipo estando en un partido o liga
+  *  4a. El sistema le impide modificar el logo del equipo
+  *  3b. El usuario no coloca ningún logo nuevo o ingresa un formato invalido
+  *  4b. El sistema no valida el logo y le pide que ingrese un logo nuevo
+
 
 ### CU-9: Mirar el ranking global de equipos
 
