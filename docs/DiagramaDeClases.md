@@ -1,0 +1,1 @@
+![Diagrama de Clases del Sistema](../assets/diagrama-clases.svg)
