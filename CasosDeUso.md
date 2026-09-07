@@ -129,6 +129,26 @@
  * 8b. El sistema lleva al usuario al menú anterior sin terminar de crear la liga
 
 ### CU-25: Unirse a una Liga
+* **Actor:**
+ * Usuario
+* **Precondición:**
+ * El usuario debe tener el mínimo de jugadores y comportamientos creados.
+ * La liga seleccionada no debe estar iniciada.
+* **Escenario Principal:** 
+ 1. El usuario accede al apartado de unirse a una liga
+ 2. El sistema muestra la lista de ligas.
+ 3. El usuario selecciona una liga desde la lista de ligas.
+ 4. El sistema verifica si la liga seleccionada es pública o privada. Si es pública, omite el paso 5.
+ 5. El sistema solicita la contraseña de la liga y el usuario la ingresa.
+ 6. El sistema valida que aún haya cupo disponible y, si aplica, que la contraseña sea correcta.
+ 7. El usuario selecciona la alineación
+ 8. El usuario selecciona la formación
+ 9. El usuario confirma la inscripción a la liga
+ 10. El sistema inscribe al equipo del usuario en la liga.
+ 11. El sistema muestra un mensaje de confirmación de inscripción exitosa.
+* **Escenarios alternativos:**
+ * 5a. Contraseña incorrecta: Si la liga es privada y el usuario ingresa una contraseña incorrecta en el paso 5, el sistema muestra un mensaje de error y permite reintentar.
+ * 6a. Liga sin cupo: Si entre el paso 1 y el 6 otro usuario ocupa el último lugar y la liga se queda sin cupos, el sistema cancela la inscripción y muestra un mensaje avisando que la liga está llena.
 
 ### CU-26: Cancelar una liga
 
