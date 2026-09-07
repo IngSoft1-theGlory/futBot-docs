@@ -67,21 +67,39 @@
 
 ### CU-6: Crear un Equipo
 * **Actor:**
- * Usuario
+  * Usuario
 * **Precondición:**
- * El usuario debe estar logueado
- * El usuario no debe tener un equipo existente
+  * El usuario debe estar logueado
+  * El usuario no debe tener un equipo existente
 * **Escenario Principal:**
- 1. El usuario registra un nombre para su equipo, sin limitaciones porque no es único.
- 2. El usuario selecciona un logo para su equipo.
+  1. El usuario registra un nombre para su equipo, sin limitaciones porque no es único.
+  2. El usuario selecciona un logo para su equipo.
 * **Escenarios Alternativos:**
- * 1a. El usuario deja vacío el campo de nombre de equipo.
- * 1b. El sistema le muestra un mensaje al usuario de que el campo no puede quedar vacío. 
- * 2a. El usuario ingresa un logo invalido o no ingresa ningún logo para su equipo.
- * 2b. El sistema le muestra por mensaje al usuario que el logo es invalido o vacío. 
+  * 1a. El usuario deja vacío el campo de nombre de equipo.
+  * 1b. El sistema le muestra un mensaje al usuario de que el campo no puede quedar vacío. 
+  * 2a. El usuario ingresa un logo invalido o no ingresa ningún logo para su equipo.
+  * 2b. El sistema le muestra por mensaje al usuario que el logo es invalido o vacío. 
 
 ### CU-7: Modificar Nombre del Equipo
-
+* **Actor:**
+  * Usuario
+* **Precondición:**
+  * El usuario debe tener un equipo creado
+* **Escenario Principal:**
+  1. El usuario ingresa al apartado del equipo
+  2. El sistema muestra por pantalla la plantilla del equipo
+  3. El usuario modifica el nombre del equipo eligiendo un nombre nuevo
+  4. El sistema verifica que no esté vacío el nombre nuevo
+  5. El sistema realiza el cambio de nombre 
+  6. El usuario confirma los cambios y regresa al apartado anterior
+  7. El sistema muestra por pantalla que el cambio fue exitoso y lleva al usuario al apartado anterior
+* **Escenarios Alternativos:** 
+  *  1a. El usuario sale del apartado equipo sin hacer cambios
+  *  1b. El sistema cierra la gestión de equipo y vuelve al apartado anterior
+  *  3a. El usuario ingresa al apartado equipo estando en un partido o liga
+  *  3b. El sistema le impide modificar el nombre del equipo
+  *  4a. El usuario ingresa un nombre vacío para el equipo  
+  *  4b. El sistema no modifica el nombre del equipo ya que la casilla está vacía
 
 ### CU-8: Modificar logo del equipo
 
