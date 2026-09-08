@@ -56,14 +56,83 @@
 ## 2. Desarrollo de Casos de Uso 
 
 ### CU-1: Crear un Usuario
-
-### CU-2: Cambiar Nombre de Usuario 
+* **Actor:**
+  * Usuario
+* **Precondición:**
+  * Ninguna
+* **Escenario Principal:**
+  1. El usuario accede al sistema
+  2. El sistema le muestra las opciones de registrar usuario o ingresar
+  3. El usuario elige registrarse
+  4. El sistema le muestra los campos que debe rellenar: nombre, username, email y contraseña.
+  5. El usuario registra un nombre y un nombre de usuario
+  6. El usuario registra un email único
+  7. El usuario registra una contraseña asociada a la cuenta
+  8. El usuario termina de registrarse
+  9. El sistema muestra por pantalla que el usuario se registro correctamente
+* **Escenarios Alternativos:**
+  * 1a. El usuario decide no crear la cuenta seleccionando el botón de cancelar
+  * 1b. El sistema redirige al usuario a la página anterior
+  * 6a. El usuario registra un email que ya está en uso
+  * 6b. El sistema avisa que el email elegido ya está en uso y que debe elegir uno distinto
+  * 9a. El sistema muestra por mensaje que no se pudo crear el usuario por un error del sistema
+  
+### CU-2: Modificar Nombre de Usuario
+* **Actor:**
+  * Usuario
+* **Precondición:**
+  * El usuario debe estar logueado
+* **Escenario Principal:**
+   1. El usuario accede a la sección de gestionar usuario
+   2. El sistema ofrece la opción de cambiar nombre de usuario
+   3. El usuario elige un username
+   4. El sistema modifica el nombre de usuario correctamente
+* **Escenarios Alternativos:**
+  * 3a. El usuario deja el campo de nombre de usuario vacio
+  * 3b. El sistema no permite el cambio, avisando que el campo no puede ser vacío.
 
 ### CU-3: Eliminar Usuario 
-
+* **Actor:**
+  * Usuario
+* **Precondición:**
+  * El usuario debe estar logueado
+* **Escenario Principal:**
+  1. El usuario accede a la sección de editar su perfil
+  2. El sistema le muestra las opciones de edición
+  3. El usuario selecciona “eliminar usuario”
+  4. El sistema le pregunta al usuario si desea confirmar la operación
+  5. El usuario confirma la operación y la cuenta se elimina
+  6. El sistema elimina el usuario, su equipo (de tenerlo) y las estadísticas de su equipo
+  7. El sistema avisa que el usuario ha sido eliminado y redirige al usuario a la página de iniciar sesión
+* **Escenarios Alternativos:**
+  * 4a. El usuario decide no eliminar la cuenta y cancela la operación
+  * 4b. El sistema se mantiene en la sección de editar perfil
+  * 4a’. El usuario pertenece a una liga/partido
+  * 4b’. El sistema le avisa que es imposible realizar la operación porque pertenece a una liga/partido
+    
 ### CU-4: Iniciar sesión
-
+* **Actor:**
+  * Usuario
+* **Precondición:**
+  * Ninguna
+* **Escenario Principal:**
+  1. El usuario ingresa a la página de iniciar sesión
+  2. El usuario ingresa su email y contraseña
+  3. El sistema autentifica los datos del usuario y, si son correctos, le permite ingresar a su cuenta
+* **Escenarios Alternativos:**
+  * 1a. El usuario ingresa un email o contraseña incorrecto
+  * 1b. El sistema le avisa al usuario que algún dato ingresado es incorrecto o que la cuenta no existe
+    
 ### CU-5: Cerrar sesión 
+* **Actor:**
+  * Usuario
+* **Precondición:**
+  * El usuario debe estar logueado
+* **Escenario Principal:**
+  1. El usuario selecciona la opción de cerrar sesión
+  2. El sistema cierra la sesión y redirige al usuario a la página de crear cuenta o iniciar sesión
+* **Escenarios Alternativos:**
+  * Ninguno
 
 ### CU-6: Crear un Equipo
 * **Actor:**
