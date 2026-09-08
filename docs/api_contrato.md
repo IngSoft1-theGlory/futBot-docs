@@ -2,69 +2,69 @@
 
 
 **USUARIO:**
-+ post crear usuario - Cristian
-+ post iniciar sesión y autenticar - Cristian
-+ post cerrar sesión - Cristian
-+ put cambiar nombre de usuario - Cristian
-+ delete eliminar usuario - Cristian
++ post crear usuario
++ post iniciar sesión y autenticar
++ post cerrar sesión
++ put cambiar nombre de usuario 
++ delete eliminar usuario
 
 
 **EQUIPO y RANKING:**
-+ post crear equipo - Cristian
-+ put modificar nombre de equipo - Cristian
-+ put modificar logo de equipo - Cristian
-+ get ver perfil de un equipo - Orlando
-+ get obtener alineación y formación de un equipo - Noah
-+ get ver ranking global - Orlando
++ post crear equipo
++ put modificar nombre de equipo
++ put modificar logo de equipo
++ get ver perfil de un equipo
++ get obtener alineación y formación de un equipo
++ get ver ranking global
 
 
 **JUGADOR:**
-+ post crear jugador - Orlando
-+ delete eliminar jugador - Orlando
-+ put cambiar nombre de jugador - Noah
-+ put cambiar número de jugador - Noah
-+ post asignar un comportamiento a un jugador (antes de un partido) - Noah
-+ get obtener lista de jugadores - Cristian
++ post crear jugador
++ delete eliminar jugador
++ put cambiar nombre de jugador 
++ put cambiar número de jugador 
++ post asignar un comportamiento a un jugador (antes de un partido)
++ get obtener lista de jugadores 
 
 
 **COMPORTAMIENTO:**
-+ post crear comportamientos - Noah
-+ delete eliminar comportamiento - Alex
-+ get listar comportamientos del usuario - Alex
-+ put modificar nombre de comportamiento - Orlando
-+ put modificar descripción - Alex
-+ put modificar actividad del comportamiento - Orlando
++ post crear comportamientos 
++ delete eliminar comportamiento 
++ get listar comportamientos del usuario 
++ put modificar nombre de comportamiento 
++ put modificar descripción
++ put modificar actividad del comportamiento 
 
 
 **LIGAS:**
-+ post crear liga - Alex
-+ delete cancelar liga - Alex
-+ delete abandonar liga - Alex
-+ get ver todos los detalles de la liga (ranking de liga, fixture de liga) - Alex
-+ get listar ligas - Ema
-+ post unirse a una liga - Ema
-+ post iniciar la liga - Cris
++ post crear liga
++ delete cancelar liga 
++ delete abandonar liga
++ get ver todos los detalles de la liga (ranking de liga, fixture de liga) 
++ get listar ligas
++ post unirse a una liga 
++ post iniciar la liga 
 
 
 **PARTIDO:**
-+ post crear partido amistoso - Ema
-+ get listar partidos amistosos - Noah
-+ delete eliminar partido - Fer
-+ get ver resultado final de un partido - Fer
-+ post unirse a un amistoso - Fer
++ post crear partido amistoso 
++ get listar partidos amistosos 
++ delete eliminar partido 
++ get ver resultado final de un partido 
++ post unirse a un amistoso 
 
 
 **DENTRO DEL PARTIDO:**
-+ put intercambiar jugadores en partido (requiere estar en una pausa) - Alex
-+ put intercambiar comportamiento de un jugador en partido - Noah
-+ get ver detalles dentro del partido - Fer
++ put intercambiar jugadores en partido (requiere estar en una pausa) 
++ put intercambiar comportamiento de un jugador en partido 
++ get ver detalles dentro del partido 
 
 
 **WEBSOCKETS:**
-+ post solicitar autorización mediante websockets - Cris
-+ WS canal unidireccional en tiempo real para eventos del sistema - Cris
-+ post solicitar autorización para conectarse al partido - Cris 
-+ WS canal bidireccional en tiempo real para la simulación tick a tick - Cris
++ post solicitar autorización mediante websockets 
++ WS canal unidireccional en tiempo real para eventos del sistema 
++ post solicitar autorización para conectarse al partido  
++ WS canal bidireccional en tiempo real para la simulación tick a tick 
 
 
 ---
