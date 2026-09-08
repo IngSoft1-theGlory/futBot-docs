@@ -593,11 +593,62 @@ El sistema redirige al usuario a la sección general de listado de ligas.
   * 4a. El usuario decide no abandonar la liga y cancela la acción.
   * 4a.1. El sistema cierra el cuadro de confirmación y lo mantiene unido a la sala de espera.
 
-### CU-30: Crear un Partido Amistoso 
+### CU-30: Crear un Partido Amistoso {Alex}
+* **Actor:** 
+    * Usuario.
+* **Precondición:** 
+    * El usuario debe tener el mínimo de jugadores y comportamientos creados
+* **Escenario Principal:**
+    1. El usuario ingresa al apartado de crear un amistoso
+    2. El sistema le muestra las opciones para crear un amistoso
+    3. El usuario elige la duración del partido
+    4. El usuario selecciona la alineación
+    5. El usuario selecciona la formación
+    6. El usuario termina de crear el amistoso
+    9. El sistema muestra por pantalla que se creó el amistoso con éxito
+    10. El sistema mueve al usuario a la sala de espera 
+    11. El sistema espera que se una un equipo rival a la sala de espera para dar inicio automáticamente al partido.
+* **Escenario Alternativo:**
+    * 10a. El usuario (anfitrión) decide abandonar la sala de espera y selecciona “cancelar”.
+    * El sistema valida la cancelación y regresa al usuario al menú anterior
 
 ### CU-31: Cancelar amistoso 
+* **Actor:** 
+    * Usuario.
+* **Precondición:** 
+    * El usuario debe ser el anfitrión del amistoso.
+    * El amistoso no debe estar iniciado 
+* **Escenario Principal:** 
+    1. El usuario anfitrión cancela el amistoso.
+    2. El sistema solicita confirmación de cancelación.
+    3. El usuario confirma la cancelación.
+    4. El sistema mueve al usuario al apartado anterior
+    5. El sistema elimina automáticamente el amistoso.
+* **Escenarios Alternativos:**
+    * 3a. El usuario no confirma la cancelación.
+    * El sistema mantiene al usuario en la sala de espera.
 
 ### CU-32: Unirse a un amistoso
+* **Actor:** 
+    * Usuario.
+* **Precondición:** 
+    * El usuario debe tener el mínimo de jugadores y comportamientos creados.
+    * El amistoso no esté iniciado
+* **Escenario Principal:**
+    1. El usuario selecciona unirse a un amistoso.
+    2. El sistema muestra una lista de partidos amistosos.
+    3. El usuario selecciona el amistoso.
+    4. El sistema mueve al usuario a la sala de espera por un tiempo determinado
+    5. El usuario selecciona la alineación
+    6. El usuario selecciona la formación 
+    7. El sistema valida la selección y verifica si aun hay cupo
+    8. El sistema comienza el partido automáticamente
+* **Escenarios Alternativos:**
+    * 4a. El sistema no permite ingresar a la sala de espera del partido porque ya no existe.  
+    * 4b. El sistema echa al usuario del amistoso porque se acabó el tiempo y el usuario no eligió la alineación y formación
+    * El sistema lleva al usuario al apartado anterior
+    * 7a. Si entre los pasos 4 al 6 otro equipo ocupa el lugar, el amistoso se queda sin cupo y el sistema cancela la inscripción y muestra un mensaje de que el amistoso está lleno
+    * El sistema lleva al usuario al apartado anterior.
 
 ### CU-33: Ver atributos de un jugador en el partido
 * **Actor:** 
