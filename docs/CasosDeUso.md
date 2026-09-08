@@ -531,6 +531,18 @@ El sistema redirige al usuario a la sección general de listado de ligas.
 ### CU-32: Ver comportamiento del jugador en partido
 
 ### CU-33: Cancelar amistoso 
+* **Actor:** 
+  * Usuario.
+* **Precondición:** 
+  * El usuario debe estar en el partido
+* **Escenario Principal:**
+  1. El usuario selecciona un jugador.
+  2. El sistema muestra los atributos del jugador seleccionado.
+* **Escenario Alternativo:**
+  * 1a. El usuario selecciona otro jugador.
+  * 1a.1 El sistema muestra los atributos del jugador seleccionado.
+  * 1b El usuario selecciona de nuevo el jugador y se esconden los atributos del jugador.
+  * 1b.1 El sistema deja de mostrar los atributos del jugador.
 
 ### CU-34: Ver el resultado final de un partido
 
