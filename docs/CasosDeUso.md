@@ -585,5 +585,16 @@ El sistema redirige al usuario a la sección general de listado de ligas.
   * 2a. El usuario selecciona salir del partido
   * 2b. El sistema lleva al usuario al apartado anterior
   * 3a y 4a. El usuario decide no hacer la sustitución 
-  * 6a El sistema no valida la sustitución y no intercambia los jugadores.
+  * 6a. El sistema no valida la sustitución y no intercambia los jugadores.
+
 ### CU-37: Salir del partido
+* **Actor:** 
+  * Usuario
+* **Precondición:** 
+  * Estar en un partido en transcurso.
+* **Escenario Principal:**
+  1. El usuario está jugando el partido.
+  2. El usuario selecciona la opción para cerrar la interfaz del partido.
+  3. El sistema lo redirecciona a la pestaña anterior, permitiendo navegar por otras secciones mientras el partido sigue su curso.
+* **Escenarios Alternativos:**
+  * El usuario decide no salir del partido 
