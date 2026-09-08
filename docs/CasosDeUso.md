@@ -569,5 +569,21 @@ El sistema redirige al usuario a la sección general de listado de ligas.
   * 3a. El sistema mueve al usuario al apartado anterior
 
 ### CU-36: Intercambiar jugador en partido
-
+* **Actor:** 
+  * Usuario
+* **Precondición:** 
+  * Estar en el descanso del partido.
+* **Escenario Principal:**
+  1. El usuario accede a la pestaña de descanso.
+  2. El sistema muestra la pantalla de descanso por un tiempo predeterminado
+  3. El usuario selecciona el jugador titular propio a sustituir.
+  4. El usuario selecciona el jugador suplente propio a sustituir
+  5. El usuario confirma la sustitución
+  6. El sistema verifica la sustitución e intercambia los jugadores
+  7. El sistema, después del tiempo predeterminado, lleva al usuario al apartado siguiente
+* **Escenarios Alternativos:**
+  * 2a. El usuario selecciona salir del partido
+  * 2b. El sistema lleva al usuario al apartado anterior
+  * 3a y 4a. El usuario decide no hacer la sustitución 
+  * 6a El sistema no valida la sustitución y no intercambia los jugadores.
 ### CU-37: Salir del partido
