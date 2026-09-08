@@ -545,6 +545,15 @@ El sistema redirige al usuario a la sección general de listado de ligas.
   * 1b.1 El sistema deja de mostrar los atributos del jugador.
 
 ### CU-34: Ver el resultado final de un partido
+* **Actor:**
+  * Usuario.
+* **Precondición:**
+  * El jugador debe ser propio del usuario.
+  * El usuario debe estar en el partido.
+* **Escenario Principal**
+  1. El usuario accede a la sesión del partido.
+  2. El sistema muestra en pantalla el comportamiento asignado al jugador.
+* **Escenario Alternativo:**  
 
 ### CU-35: Unirse a un amistoso
 
