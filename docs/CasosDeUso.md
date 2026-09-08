@@ -556,6 +556,17 @@ El sistema redirige al usuario a la sección general de listado de ligas.
 * **Escenario Alternativo:**  
 
 ### CU-35: Ver el resultado final de un partido
+* **Actor:** 
+  * Usuario.
+* **Precondición:** 
+  * Partido finalizado.
+* **Escenario Principal:**
+  1. El sistema muestra por pantalla el resultado final del partido por un tiempo determinado y habilita un botón para cerrar la pestaña
+  2. El usuario decide esperar a que se acabe el tiempo
+  3. El sistema lo mueve automáticamente al apartado siguiente.
+* **Escenarios Alternativos:**
+  * 2a. El usuario cierra la pestaña del resultado final
+  * 3a. El sistema mueve al usuario al apartado anterior
 
 ### CU-36: Intercambiar jugador en partido
 
