@@ -506,7 +506,7 @@
  * 3a. La liga seleccionada aún no está iniciada
  * 3a.1. El sistema omite la tabla y el fixture (ya que aún no se han generado) y muestra únicamente la lista de equipos unidos actualmente.
 
-### CU-29: Salir de una liga 
+### CU-29: Abandonar una liga 
 * **Actor:**
     * Usuario 
 * **Precondición:**
@@ -526,11 +526,11 @@ El sistema redirige al usuario a la sección general de listado de ligas.
 
 ### CU-30: Crear un Partido Amistoso 
 
-### CU-31: Ver atributos de un jugador en el partido 
+### CU-31: Cancelar amistoso 
 
-### CU-32: Ver comportamiento del jugador en partido
+### CU-32: Unirse a un amistoso
 
-### CU-33: Cancelar amistoso 
+### CU-33: Ver atributos de un jugador en el partido
 * **Actor:** 
   * Usuario.
 * **Precondición:** 
@@ -544,7 +544,7 @@ El sistema redirige al usuario a la sección general de listado de ligas.
   * 1b El usuario selecciona de nuevo el jugador y se esconden los atributos del jugador.
   * 1b.1 El sistema deja de mostrar los atributos del jugador.
 
-### CU-34: Ver el resultado final de un partido
+### CU-34: Ver comportamiento del jugador en partido
 * **Actor:**
   * Usuario.
 * **Precondición:**
@@ -555,7 +555,7 @@ El sistema redirige al usuario a la sección general de listado de ligas.
   2. El sistema muestra en pantalla el comportamiento asignado al jugador.
 * **Escenario Alternativo:**  
 
-### CU-35: Unirse a un amistoso
+### CU-35: Ver el resultado final de un partido
 
 ### CU-36: Intercambiar jugador en partido
 
